@@ -1,0 +1,466 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-8ea04875e70c4b0bb41da869e81236e54394d63638a1ef12fa558a4a835f1164.ico" />
+<link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg" color="#111" />
+<title>CodePen - A Pen by  Ahmed Zake</title>
+<style>
+      @import url('https://fonts.googleapis.com/css?family=Oswald'); 
+
+*,body {
+  border:none;
+  padding:0;
+  margin:0;
+  box-sizing:border-box;
+  }
+
+  body{
+    background:white; 
+    font-family:Oswald;
+    scroll-behaviour: smooth;
+    }
+
+
+header{
+  position:relative;
+  background:black;
+  z-index:2;
+  padding :0 0 30px 0;
+  }
+
+header::after{
+  content:"";
+clip-path: polygon(100% 67%, 100% 100%, 82% 100%, 0 100%, 0 23%);
+  margin:-20px 0 0 0;
+  background:white;
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  z-index:-1;
+  }
+
+#header-box {
+  position:absolute;
+  top:15%;
+  right:0;
+  left:0;
+ 
+  }
+#buy {
+  margin:0px auto ; 
+  font-size:4rem;
+  text-align:center;
+  width :300px;
+  border-radius:40px;
+ background:#fcf807;
+  transition:.1s all ease-in ;
+  }
+#buy:hover {
+  background:#ea8b07;
+  }
+ 
+header img {
+  width:100%;
+  margin :150px auto;
+  display:bolck;
+  }
+#nav {
+  background:#2b2b2b;
+  display:grid;
+   grid-template-columns:1fr 1fr;
+  }
+#h{
+  color:white;
+  font-size:2.5rem;
+  margin:0 20px;
+  }
+#list{
+  display:flex;
+  color:white; 
+  align-self:flex-end;
+  justify-content:flex-end;
+  list-style:none; 
+  margin:0 20px 0 0px;
+  padding:10px 0;
+  
+  }
+#list li {
+  margin :0 10px;
+  
+ padding:10px;
+  }
+#list li:nth-child(1) {
+  background :white; 
+  color:black;
+  border-radius:500px;
+  }
+
+#list li:hover {
+    background :white; 
+    color:black;
+    border-radius:500px;
+  }
+
+#header-box #title {
+  color:#57d65c;
+  font-size:4rem;
+  margin :-5% 0 0 0;
+  text-align:center;
+  }
+#cont{
+  background:#27282b;
+  margin:0 0;
+  }
+#card-cont {
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr ;
+  grid-gap:10px;
+  
+  }
+
+
+.cards{
+  background:white ;
+  margin:10px 6px;
+  
+  }
+ 
+.cards img {
+  width:80%;
+  height:250px;
+  margin:0 auto;
+  }
+.cards h1 {
+  color:black; 
+  text-align:center;
+  font-size :1.5rem;
+  }
+.cards .money{
+  color:#123e84;
+  }
+
+#logos {
+  display:grid;
+   grid-template-columns:33% 33% 33%;
+   grid-template-rows:200px;
+  }
+#logos img {
+  display:block ; 
+  width:100px;
+   margin:80px auto ;
+  }
+.stars {
+  display:grid;
+  grid-template-columns:25% 25% 25% 25%;
+  
+  }
+.stars i{
+  font-size:2rem;
+  color:#ffd907;
+  margin:5px auto ;
+  }
+#head-text {
+  color :white;
+  text-align:center;
+  }
+#form {
+  background:#153260;
+  color:white;
+  padding:19px 15px;
+  }
+#form h1{
+  font-size:2.5rem;
+  margin:0 auto; 
+  text-align:center;
+  }
+
+input {
+  display:block;
+  width:90%;
+  height:100px;
+  margin:19px auto; 
+  border-radius:10px;
+  outline:none;
+  font-size:2rem;
+  }
+#submit{
+  width:150px;
+  background:#2564db;
+  border-radius:50px;
+  margin:0 auto ;
+  font-size:1.5rem;
+  color:white;
+  }
+#submit:hover {
+  background:#1a4aa3;
+  }
+
+label {
+  font-size:2rem;
+  margin:10px auto; 
+  text-align:center;
+  }
+footer {
+  width:100%;
+  }
+  .icons{
+  width:100%;
+  font-size:3rem;
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr 1fr;
+  background:#282828;
+  padding:15px 0;
+  }
+.icons i {
+  color:#b8bec6;
+  margin:0px auto;
+  padding:0;
+  transition:.3s color;
+  }
+
+.icons i:hover:nth-child(1){
+  color:#639fff;
+  }
+
+
+.icons i:hover:nth-child(2){
+  color:#f72d22;
+  }
+
+
+.icons i:hover:nth-child(3){
+  color:#ff4793;
+  }
+
+
+.icons i:hover:nth-child(4){
+  color:#1857bc;
+  }
+
+ #second {
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  list-style:none;
+  margin:30px auto ;
+   text-align:center;
+  
+   
+   }
+ #second h1{
+   color:#2564db;
+   }
+#second p{
+  font-size:.9rem;
+  }
+
+footer h1 {
+  font-size:1.5rem;
+  text-align:center;
+  color:#a7b4c9;
+  }
+@media only screen and (max-width: 500px){
+  #card-cont {
+  display:grid;
+  grid-template-columns:1fr;
+  grid-gap:10px;
+  
+  }
+  #h {
+  font-size:1.5rem;  
+  width:100%;
+  color:white;
+  margin:auto 5px;
+    }
+  #list li{
+    font-size:.7rem;
+    padding:5px;
+    display:none;
+    text-align:center;
+    overflow:hidden;
+    }
+  #header-box #title {
+  color:#57d65c;
+  font-size:2rem;
+  margin :-10% 0 0 0;
+  text-align:center;
+  }
+  #buy {
+    width:200px;
+    font-size:2rem;
+    }
+  header img {
+  width:100%;
+  margin :90px auto;
+  display:bolck;
+  }
+  #logos {
+  display:grid;
+   grid-template-columns:33% 33% 33%;
+   grid-template-rows:100px;
+  }
+  #logos img {
+  display:block ; 
+  width:50px;
+   margin:30px auto ;
+  }
+  input {
+  display:block;
+  width:100%;
+  height:50px;
+  margin:19px auto; 
+  border-radius:10px;
+  outline:none;
+  font-size:2rem;
+  }
+  label {
+  font-size:1.2rem;
+  margin:10px auto; 
+  text-align:center;
+  }
+  #second {
+   display:none; 
+    }
+  .icons {
+    font-size:1.5rem;
+    }
+  footer h1{
+    font-size :1rem;
+    }
+  }
+    </style>
+</head>
+<body translate="no">
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<title>Page Title</title>
+</head>
+<body>
+<header>
+<div id="nav">
+<h1 id="h">Sport Solutions </h1>
+<ul id="list">
+<li>
+<h3>Home</h3>
+</li>
+<li>
+<h3>About</h3>
+</li>
+<li>
+<h3>bestselling</h3>
+</li>
+<li>
+<h3>new</h3>
+</li>
+</ul>
+</div>
+<div id="header-box"> <h1 id="title"> New Look And Strong performance </h1>
+</div>
+<img src="http://pluspng.com/img-png/shoe-hd-png-single-red-rose-png-pic-420.png">
+<h1 id="buy">buy now</h1>
+</header>
+<div id="logos">
+<img src="https://seeklogo.com/images/N/nike-logo-0FBAF72D4F-seeklogo.com.png">
+<img src="https://seeklogo.com/images/A/adidas-logo-107B082DA0-seeklogo.com.png">
+<img src="https://seeklogo.com/images/P/puma-se-logo-ACC0F72575-seeklogo.com.png">
+</div>
+<div id="cont">
+<h1 id="head-text">
+Special Offers
+</h1>
+<div id="card-cont">
+<div class="cards">
+<img src="https://images.neimanmarcus.com/ca/1/product_assets/N/5/0/1/3/NMN5013_mu.jpg">
+<h1 class="money"> $590 </h1>
+<h1>Nike boost 3 </h1>
+<div class="stars">
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star-half-alt"></i>
+</div>
+</div>
+<div class="cards">
+<img src="https://5.imimg.com/data5/XH/KN/MY-8996647/nike-sport-shoes-500x500.jpg">
+<h1 class="money"> $370 </h1>
+<h1>Nike Winter Cold </h1>
+<div class="stars">
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star-half-alt"></i>
+</div>
+</div>
+<div class="cards">
+<img src="https://n2.sdlcdn.com/imgs/f/4/j/Nike-Air-Pegasus-33-Running-SDL852438294-1-4a4d4.jpeg">
+<h1 class="money"> $350 </h1>
+<h1>Nike Air 2</h1>
+<div class="stars">
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star-half-alt"></i>
+</div>
+</div>
+<div class="cards">
+<img src="https://n4.sdlcdn.com/imgs/f/i/o/Puma-Ferrari-Red-Casual-Shoes-SDL556756006-1-bccfe.jpg">
+<h1 class="money"> $499 </h1>
+<h1>Puma Ferrari </h1>
+<div class="stars">
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star-half-alt"></i>
+</div>
+</div>
+</div>
+</div>
+<div id="form">
+<h1>feel free to send us feedback </h1>
+<form>
+<label>name </label>
+<input type="text">
+<label>E-mail </label>
+<input type="text">
+<label>your feedback </label>
+<input type="text">
+<input id="submit" type="submit">
+</form>
+</div>
+<footer>
+<div class="icons">
+<i class="fab fa-twitter"></i>
+<i class="fab fa-youtube"></i>
+<i class="fab fa-instagram"></i>
+<i class="fab fa-facebook"></i>
+</div>
+<ul id="second">
+<li>
+<h1>About Us</h1>
+<p>Our Story </p>
+</li>
+<li>
+<h1>Jobs </h1>
+<p>looking for job ? </p>
+</li>
+<li>
+<h1>Our products </h1>
+<p>how we get heigh quality products </p>
+</li>
+</ul>
+<h1>All Rights Reserved ®</h1>
+</footer>
+</body>
+</html>
+<script src="https://static.codepen.io/assets/editor/live/css_reload-5619dc0905a68b2e6298901de54f73cefe4e079f65a75406858d92924b4938bf.js"></script>
+</body>
+</html>
